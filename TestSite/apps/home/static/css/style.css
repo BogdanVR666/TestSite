@@ -1,0 +1,27 @@
+body {
+    margin: auto auto;
+    background-color: #0ff;
+}
+.product {
+    display: flex;
+    flex-wrap: wrap;
+}
+.product__item {
+    margin-top: 10px;
+    margin-left: 10px;
+    flex: 0 1 48%;
+    background-color: #fff;
+}
+.product__title {
+    text-align: center;
+    padding: 5px;
+    background-color: #ff0;
+}
+.product__description {
+    padding: 5px; 
+    padding-bottom: 0;
+}
+.product__price {
+    padding: 5px;
+    text-align: right;
+}
