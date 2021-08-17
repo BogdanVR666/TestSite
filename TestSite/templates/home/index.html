@@ -9,14 +9,27 @@
     <title>Товары</title>
 </head>
 <body>
-    <div class="product">
-        {% for i in profit_products %}
-        <div class="product__item">
-            <div class="product__title">{{i.title}}</div>
-            <div class="product__description">{{i.description}}</div>
-            <div class="product__price">{{i.price}} грн</div>
+    <header class="header">
+        <div class="header__item"></div>
+        <div class="header__item"></div>
+        <div class="header__item">
+            <div class="menu">
+                <div class="menu__item">log in</div>
+                <div class="menu__item">sign up</div>
+                <div class="menu__item"></div>
+                <div class="menu__item"></div>
+            </div>
         </div>
-        {% endfor %}
-    </div>
+    </header>
+        <div class="product">
+            {% for i in profit_products %}
+            <div class="product__item">
+                <div class="product__title">{{i.title}}</div>
+                <div class="product__description">{{i.description}}</div>
+                <div class="product__price">{{i.price}} грн</div>
+            </div>
+            {% endfor %}
+        </div>
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

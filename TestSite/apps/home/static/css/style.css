@@ -2,7 +2,23 @@ body {
     margin: auto auto;
     background-color: #0ff;
 }
+.header {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: rgb(200, 200, 200);
+    padding: 5px;   
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+.header__item {
+    flex: 1 1 33%;
+}
+.menu::before {
+    content: '';
+}
 .product {
+    padding-top: 45px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -10,7 +26,7 @@ body {
     margin-top: 10px;
     margin-left: 10px;
     flex: 0 1 48%;
-    background-color: rgb(204, 0, 255);
+    background-color: rgb(232, 138, 255);
 }
 .product__title {
     text-align: center;
