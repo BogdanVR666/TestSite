@@ -10,7 +10,7 @@ body {
     margin-top: 10px;
     margin-left: 10px;
     flex: 0 1 48%;
-    background-color: #fff;
+    background-color: rgb(204, 0, 255);
 }
 .product__title {
     text-align: center;
