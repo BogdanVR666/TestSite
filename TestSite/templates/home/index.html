@@ -9,27 +9,39 @@
     <title>Товары</title>
 </head>
 <body>
-    <header class="header">
-        <div class="header__item"></div>
-        <div class="header__item"></div>
-        <div class="header__item">
-            <div class="menu">
-                <a href='#' class="menu__item">log in</a>
-                <a href='#' class="menu__item">sign up</a>
-                <a href='#' class="menu__item">home</a>
-                <a href='#' class="menu__item">bascket</a>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__name">TestShop</div>
+            <div class="header__item">
+                <div class="menu">
+                    <a href='#' class="menu__item">log in</a>
+                    <a href='#' class="menu__item">sign up</a>
+                    <a href='#' class="menu__item">home</a>
+                    <a href='#' class="menu__item">bascket</a>
+                </div>
             </div>
-        </div>
-    </header>
-        <div class="product">
-            {% for i in profit_products %}
-            <div class="product__item">
-                <div class="product__title">{{i.title}}</div>
-                <div class="product__description">{{i.description}}</div>
-                <div class="product__price">{{i.price}} грн</div>
+        </header>
+        <main class="product">
+            <div class="product__wrapper">
+                {% for i in profit_products %}
+                <div class="product__item">
+                    <div class="product__title">{{i.title}}</div>
+                    <div class="product__description">{{i.description}}</div>
+                    <div class="product__price">{{i.price}} грн</div>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
-    <script src="{% static 'js/script.js' %}"></script>
+        </main>
+        <footer class="footer">
+            <a href="#" id='viber' class="footer__link">Viber</a>
+            <a href="#" id="Telegram" class="footer__link">Telegram</a>
+            <a href="#" id="Instagram" class="footer__link">Instagram</a>
+            <a href="#" id="Facebook" class="footer__link">Facebook</a>
+            <a href="#" id="Reddit" class="footer__link">Reddit</a>
+        </footer>
+    </div>
+    <script type='text/javascript' src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

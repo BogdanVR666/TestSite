@@ -1,34 +1,43 @@
-body {
+html, body {
+    height: 100%;
     margin: auto auto;
     background-color: #fff;
 }
 a {
     text-decoration: none;
 }
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 .header {
     display: flex;
+    justify-content: space-between;
     background-color: rgb(200, 200, 200);
-    padding: 5px;   
+    padding: 10px;   
     position: fixed;
     width: 100%;
     z-index: 5;
-}
-.header__item {
-    min-width: 25%;
 }
 .menu {
     display: flex;
     flex-wrap: nowrap;
 }
 .menu__item {
-    justify-content: space-between;
+    font-family: 'Ubuntu', monospace;
+    font-size: 15px;
+    text-transform: uppercase;
     padding: 0 10px;
     margin: 0 5px;
-    border-radius: 5px;
+    border-radius: 2px;
     background-color: #ff0;
 }
-.product {
-    padding-top: 45px;
+main {
+    flex: 1 1 auto;
+}
+.product__wrapper {
+    padding-top: 40px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -50,4 +59,18 @@ a {
 .product__price {
     padding: 5px;
     text-align: right;
+}
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    text-align: center;
+    background-color: #aaaaaa;
+}
+#Telegram {
+    transition: all .5s;
+}
+#Telegram:hover {
+    text-shadow:#5555ff 0 0 5px,
+                #5555ff 0 0 7px;
 }
