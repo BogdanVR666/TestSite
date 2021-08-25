@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
-    margin: auto auto;
+    margin: 0 0;
+    padding: 0 0;
     background-color: #fff;
 }
 a {
@@ -14,18 +15,33 @@ a {
 .header {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(200, 200, 200);
-    padding: 10px;   
+    padding: 10px;
     position: fixed;
     width: 100%;
+    height: 21px;
     z-index: 5;
 }
-.menu {
-    display: flex;
-    flex-wrap: nowrap;
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(200, 200, 200);
 }
-.menu__item {
+.header__name, .header__item {
+    flex: 1 1 50%;
+    position: relative;
+    z-index: 2;
+}
+.header__links {
+    display: flex;
+    justify-content: flex-end;
+}
+.header__link {
     font-family: 'Ubuntu', monospace;
+    color: rgb(194, 0, 194);
     font-size: 15px;
     text-transform: uppercase;
     padding: 0 10px;
@@ -33,17 +49,61 @@ a {
     border-radius: 2px;
     background-color: #ff0;
 }
+@media (max-width: 767px) {
+    .header__menu {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+    }
+    .header__menu::before, .header__menu::after {
+        content: '';
+        background-color: #ff0;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+    }
+    .header__menu span {
+        background-color: #ff0;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        top: 9px;
+    } 
+    .header__menu::before {
+        top: 0;
+    }
+    .header__menu::after {
+        bottom: 0;
+    }
+    .header__links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /* background-color: #f00; */
+        z-index: 1;
+    }
+    .header__link {
+        color: yellow;
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
 main {
     flex: 1 1 auto;
+    margin-bottom: 15px;
 }
 .product__wrapper {
     padding-top: 40px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .product__item {
-    margin-top: 10px;
-    margin-left: 10px;
+    margin: 5px 5px;
     flex: 0 1 48%;
     background-color: rgb(232, 138, 255);
 }
